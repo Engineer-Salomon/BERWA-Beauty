@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Artisans</title>
+    <style>
+        @import url('https://googleapis.com');
+
+        :root {
+            --bg-color: #FDF9F4;
+            --card-bg: #FFFFFF;
+            --quote-bg: #F7F1E8;
+            --text-dark: #2C2623;
+            --text-muted: #6B5E56;
+            --accent-gold: #9E7D5A;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        header {
+            margin-bottom: 8px;
+        }
+
+        header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        header p {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-top: 12px;
+        }
+
+        .artisan-card {
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 32px;
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            box-shadow: 0 4px 20px rgba(158, 125, 90, 0.04);
+        }
+
+        .avatar-container {
+            flex-shrink: 0;
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-container h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .role {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .quote-box {
+            background-color: var(--quote-bg);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .quote-box p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.35rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* Responsive breakdown for smaller screens */
+        @media (max-width: 480px) {
+            .artisan-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 24px;
+                gap: 16px;
+            }
+            
+            header {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Our Artisans</h1>
+            <p>Meet the Masters Behind the Craft</p>
+        </header>
+
+        <!-- Card 1: Elena Voss -->
+        <div class="artisan-card">
+            <div class="avatar-container">
+                <!-- Using placeholder images matching the layout -->
+                <img src="https://unsplash.com" alt="Elena Voss">
+            </div>
+            <div class="info-container">
+                <h2>Elena Voss</h2>
+                <div class="role">Creative Director & Hair Artist</div>
+                <p class="bio">Trained in London & Paris. Elena specializes in soft dimensional balayage and structural hair design that grows out gracefully.</p>
+            </div>
+        </div>
+
+        <!-- Card 2: Sarah Chen -->
+        <div class="artisan-card">
+            <div class="avatar-container">
+                <img src="https://unsplash.com" alt="Sarah Chen">
+            </div>
+            <div class="info-container">
+                <h2>Sarah Chen</h2>
+                <div class="role">Master Aesthetician</div>
+                <p class="bio">Sarah brings a holistic dermal philosophy to our studio, focusing on deep cellular sculpting and botanical skin restoration.</p>
+            </div>
+        </div>
+
+        <!-- Card 3: Marcus Thorne -->
+        <div class="artisan-card">
+            <div class="avatar-container">
+                <img src="https://unsplash.com" alt="Marcus Thorne">
+            </div>
+            <div class="info-container">
+                <h2>Marcus Thorne</h2>
+                <div class="role">Editorial Makeup Artist</div>
+                <p class="bio">With a decade in high-fashion editorial, Marcus designs effortless red-carpet looks focusing on luminous, glass-skin finishes.</p>
+            </div>
+        </div>
+
+        <!-- Footer Quote -->
+        <div class="quote-box">
+            <p>"The hand of the artisan creates the quiet atmosphere of luxury."</p>
+        </div>
+    </div>
+
+</body>
+</html>
